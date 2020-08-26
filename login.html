@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="CSSLogin.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+    <script src="form.js"></script>
+    <title>LogIn</title>
+  </head>
+  <body>
+    <div class="Nav1">
+      <a href="login.html"><button type="login" class="Login">Login</button></a>
+    </div>
+    <div class="Nav2">
+      <a href="chatbot.html">
+        <button type="login" class="Login1 Demo">Scheduling</button></a
+      >
+      <a href="index.html">
+        <button type="signin" class="Login1 Signin">Home</button></a
+      >
+      <div class="container">
+        <nav class="sidenav">
+          <div class="hamburger-menu">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+          </div>
+          <h1 class="spa">Log<span>in</span></h1>
+          <ul class="nav-list">
+            <li class="nav-items">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-items">
+              <a href="documentation/index.html" class="nav-link"
+                >Verification & Eligibility</a
+              >
+            </li>
+            <li class="nav-items">
+              <a href="ProjectSchedule/ProjectSchedule.html" class="nav-link"
+                >Fix Date</a
+              >
+            </li>
+            <li class="nav-items">
+              <a href="chatbot.html" class="nav-link">Screening</a>
+            </li>
+            <li class="nav-items">
+              <a href="tracking.html" class="nav-link">Track Status</a>
+            </li>
+            <li class="nav-items">
+              <a href="#" class="nav-link">Assesment Notes</a>
+            </li>
+            <li class="nav-items">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <h2>Sign<span>UP </span>& Sign<span>IN</span></h2>
+
+    <div class="logincontent">
+      <div id="header"></div>
+      <input type="email" placeholder="  Enter email" id="email" />
+      <input type="password" placeholder="  Enter password" id="password" />
+
+      <button onclick="signUp()" id="signUp">Sign Up</button>
+      <button onclick="signIn()" id="signIn">Sign In</button>
+      <button onclick="signOut()" id="signOut">Sign Out</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

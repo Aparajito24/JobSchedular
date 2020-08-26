@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/botui@0.3.9/build/botui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/botui@0.3.9/build/botui-theme-default.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+    <title>ChatBot</title>
+  </head>
+  <body>
+    <div class="Nav1">
+      <a href="login.html"><button type="login" class="Login">Login</button></a>
+    </div>
+    <div class="Nav2">
+      <a href="#">
+        <button type="login" class="Login1 Demo">Scheduling</button></a
+      >
+      <a href="about.html">
+        <button type="signin" class="Login1 Signin">About Us</button></a
+      >
+      <div class="container">
+        <nav class="sidenav">
+          <div class="hamburger-menu">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+          </div>
+          <h1 class="spa">Chat<span class="spann">B</span>oT</h1>
+          <ul class="nav-list">
+            <li class="nav-items">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-items">
+              <a href="documentation/index.html" class="nav-link"
+                >Verification & Eligibility</a
+              >
+            </li>
+            <li class="nav-items">
+              <a href="chatbot.html" class="nav-link">Screening</a>
+            </li>
+            <li class="nav-items">
+              <a href="ProjectSchedule/ProjectSchedule.html" class="nav-link"
+                >Fix Date</a
+              >
+            </li>
+            <li class="nav-items">
+              <a href="tracking.html" class="nav-link">Track Status</a>
+            </li>
+            <li class="nav-items">
+              <a href="#" class="nav-link">Assesment Notes</a>
+            </li>
+            <li class="nav-items">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="chatbot">
+      <h1 class="spa"><span class="spann">ChatBoT</span></h1>
+      <div class="botui-app-container" id="help-bot">
+        <bot-ui></bot-ui>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/botui@0.3.9/build/botui.min.js"></script>
+      <script src="main.js"></script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

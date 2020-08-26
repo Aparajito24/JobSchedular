@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Balsamiq Sans", cursive;
+  background-color: rgb(36, 36, 36);
+}
+span {
+  font-family: "Londrina Solid", cursive;
+  font-size: 55px;
+}
+.spa {
+  color: white;
+  position: absolute;
+  font-size: 40px;
+}
+.spann {
+  color: rgb(43, 135, 255);
+}
+.Nav1 {
+  width: 100%;
+  height: 55px;
+  background-color: black;
+}
+.Login {
+  border: none;
+  color: white;
+  border-radius: 25px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 2px 2px;
+  background-color: rgb(43, 135, 255);
+  transition-duration: 0.4s;
+  cursor: pointer;
+  float: right;
+  font-family: "Balsamiq Sans", cursive;
+}
+.Login:hover {
+  animation: rotate 0.3s ease-in-out both;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+.Nav2 {
+  width: 100%;
+  height: 54px;
+  background-color: rgb(43, 135, 255);
+}
+
+.Login1 {
+  border: none;
+  color: white;
+  border-radius: 20px;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 2px 2px;
+  background-color: black;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  float: right;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+.Login1,
+.LoginSignin:hover {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+.span {
+  font-size: 50px;
+  position: absolute;
+  font-weight: 900;
+}
+.hamburger-menu {
+  width: 35px;
+  height: 30px;
+  float: left;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(43, 135, 255);
+  transition: all 0.8s;
+}
+.change .line-1 {
+  transform: rotateZ(-405deg) translate(-8px, 8px);
+}
+.change .line-2 {
+  opacity: 0;
+}
+.change .line-3 {
+  transform: rotateZ(405deg) translate(-6px, -5px);
+}
+.sidenav {
+  width: 400px;
+  height: auto;
+  background-color: black;
+  position: fixed;
+  left: -400px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  padding-top: 60px;
+  border-radius: 0% 15% 15% 0;
+  transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+  z-index: 9;
+}
+.change {
+  left: 0;
+}
+
+.nav-list {
+  text-align: left;
+  padding-top: 40px;
+}
+
+.nav-items {
+  list-style: none;
+  margin: 45px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Oswald", sans-serif;
+  color: antiquewhite;
+  font-weight: 300;
+  letter-spacing: 2px;
+  position: relative;
+  padding: 3px 0;
+}
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: rgb(43, 135, 255);
+  position: absolute;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.nav-link::after {
+  bottom: 0;
+  transform-origin: right;
+}
+.nav-link::before {
+  top: 0;
+  transform-origin: left;
+}
+.nav-link:hover::before,
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+section {
+  padding: 100px;
+}
+section h2 {
+  font-size: 4em;
+  color: #4b656d;
+}
+section h2 span {
+  display: block;
+  font-size: 0.5em;
+  color: #ff4983;
+}
+section p {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #070707;
+  z-index: 100000000;
+}
+.preloader:before {
+  content: "Loading";
+  padding-top: 220px;
+  position: absolute;
+  font-size: 10em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.03);
+}
+.preloader.active {
+  transform: translateY(-100vh);
+  transition: ease-in-out 1s;
+  transition-delay: 1s;
+}
+.counter {
+  position: relative;
+  padding-top: 200px;
+  color: rgb(43, 135, 255);
+  font-size: 14em;
+  font-weight: 700;
+  z-index: 1;
+}
+.counter:after {
+  content: "%";
+  font-size: 0.5em;
+}
+.hide {
+  opacity: 0;
+  transition: 1s;
+  position-events: none;
+}
+h2 {
+  position: absolute;
+  font-size: 4em;
+  color: gray;
+  width: 80%;
+}
+.span {
+  color: rgb(43, 135, 255);
+  font-size: 2em;
+}
+
+h2 .span:before {
+  content: "";
+  animation: animate infinite 10s;
+}
+@keyframes animate {
+  0% {
+    content: "Bold";
+  }
+  20% {
+    content: "Motivated";
+  }
+  40% {
+    content: "Creative";
+  }
+  60% {
+    content: "Home";
+  }
+  80% {
+    content: "Confident";
+  }
+  100% {
+    content: "Different";
+  }
+}
+
+h3 {
+  color: white;
+  font-weight: 800;
+  margin-top: 125px;
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 23px;
+  font-family: "Londrina Solid", cursive;
+}
+
+h3 span {
+  color: rgb(0, 108, 196);
+}
+
+.process-wrapper {
+  margin: auto;
+  max-width: 1080px;
+}
+
+#progress-bar-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  height: 100px;
+  margin-top: 65px;
+}
+
+#progress-bar-container ul {
+  padding: 0;
+  margin: 0;
+  padding-top: 15px;
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+}
+
+#progress-bar-container li:before {
+  content: " ";
+  display: block;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 2px #aaa;
+  transition: all ease 0.3s;
+}
+
+#progress-bar-container li.active:before,
+#progress-bar-container li:hover:before {
+  border: solid 2px #fff;
+
+  background: #1e54e9;
+}
+
+#progress-bar-container li {
+  list-style: none;
+  float: left;
+  width: 20%;
+  text-align: center;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all ease 0.2s;
+  vertical-align: bottom;
+  height: 60px;
+  position: relative;
+}
+
+#progress-bar-container li .step-inner {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 14px;
+}
+
+#progress-bar-container li.active,
+#progress-bar-container li:hover {
+  color: #444;
+}
+
+#progress-bar-container li:after {
+  content: " ";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #777;
+  margin: auto;
+  border: solid 7px #fff;
+  border-radius: 50%;
+  margin-top: 40px;
+  box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
+  transition: all ease 0.2s;
+}
+
+#progress-bar-container li:hover:after {
+  background: #555;
+}
+
+#progress-bar-container li.active:after {
+  background: #1e54e9;
+}
+
+#progress-bar-container #line {
+  width: 80%;
+  margin: auto;
+  background: #eee;
+  height: 6px;
+  position: absolute;
+  left: 10%;
+  top: 57px;
+  z-index: 1;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+#progress-bar-container #line-progress {
+  content: " ";
+  width: 3%;
+  height: 100%;
+  background: #1e54e9;
+  background: linear-gradient(to right, #1e54e9 0%, #2ea3b7 100%);
+  position: absolute;
+  z-index: 2;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+#progress-content-section {
+  width: 90%;
+  margin: auto;
+  background: #116efa;
+  border-radius: 4px;
+}
+
+#progress-content-section .section-content {
+  padding: 30px 40px;
+  text-align: center;
+}
+
+#progress-content-section .section-content h2 {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+#progress-content-section .section-content p {
+  font-size: 18px;
+  line-height: 1.8em;
+  color: rgb(0, 0, 0);
+}
+
+#progress-content-section .section-content {
+  display: none;
+  animation: FadeInUp 700ms ease 1;
+  animation-fill-mode: forwards;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+#progress-content-section .section-content.active {
+  display: block;
+}
+
+@keyframes FadeInUp {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+p {
+  padding-top: 20px;
+  margin-top: 20px;
+}
